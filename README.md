@@ -28,11 +28,41 @@ This is an MVC web application writted in C#, using the ASP.NET core framework. 
 
 ## Setup/Installation Requirements
 
-1. Clone the repository [here](https://github.com/nsncowan/bakery-project.git)
-2. Open the root folder, named BakeryProject.Solution, in your terminal
-3. navigate to ../VendorOrder.Tests, then enter the command: dotnet restore
-4. navigate to the /VendorOrder folder and enter the command dotnet watch. This will load the application in a web browser window.
-***
+### Installation Steps
+1. Install a compatible version of .NET 6. An installation link can be found [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+2. In the terminal, install dotnet-script by runing the following command
+```bash
+$ dotnet tool install -g dotnet-script
+```
+3. Configure your local environment to use this. Instructions [here](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-dotnet-script).
+4. Then, install MySQL. Instructions [here](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql).
+
+### Repository Setup
+1. Clone this repository.
+2. Open your terminal and navigate to this project's production directory called "HairSalon".
+3. Within the HairSalon directory, create a file titled appsettings.json
+4. Open your file editor and navigate to appsettings.json
+5. In the appsettings.json file, paste the following code:
+```javascript
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=noah_cowan;uid=[uid];pwd=[pwd];"
+  }
+}
+```
+6. Replace [uid] and [pwd] with your created SQL username and password respectively (excluding the braces).
+
+### Import the Database
+1. Open MySQL Workbench and find the Navigator pane on the left side of the window.
+2. Select "Data Import/Restore", which opens Data Import page.
+3. Select the option labeled "Import from Self Contained File". Navigate to the top level of directory of files you downloaded from this repository ("HairSalon").
+4. Within "HairSalon", select the file named noah_cowan.sql.
+5. Underneath "Default Schema to be Imported To", click the "New..." button, input the database name (noah_cowan.sql), and click "OK".
+6. Go to the "Start Import" button in the lower right corner of the Data Import Pane.
+
+### Execute the Program
+1. Open the terminal and navigate to the production direction titled HairSalon.
+2. Run `dotnet watch run` in the command line.
 
 ## Known Bugs
 None

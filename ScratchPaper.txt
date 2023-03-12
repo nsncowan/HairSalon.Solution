@@ -1,5 +1,0 @@
-
-1- set up database
-2- connect database
-3- 
-

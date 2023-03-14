@@ -56,7 +56,7 @@ $ dotnet tool install -g dotnet-script
 1. Open MySQL Workbench and find the Navigator pane on the left side of the window.
 2. Select "Data Import/Restore", which opens Data Import page.
 3. Select the option labeled "Import from Self Contained File". Navigate to the top level of directory of files you downloaded from this repository ("HairSalon").
-4. Within "HairSalon", select the file named noah_cowan.sql.
+4. Within "HairSalon", select the file named noah_cowan
 5. Underneath "Default Schema to be Imported To", click the "New..." button, input the database name (noah_cowan.sql), and click "OK".
 6. Go to the "Start Import" button in the lower right corner of the Data Import Pane.
 
